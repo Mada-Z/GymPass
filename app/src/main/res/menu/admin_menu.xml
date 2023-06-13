@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/userType"
+        android:title="@string/tip_de_utilizator"/>
+    <item android:id="@+id/admin"
+        android:title="@string/admin"/>
+    <item android:id="@+id/gym"
+        android:title="@string/sali"/>
+    <item android:id="@+id/trainers"
+        android:title="@string/antrenori"/>
+    <item android:id="@+id/clients"
+        android:title="@string/clienti"/>
+    <item android:id="@+id/subscritions"
+        android:title="@string/abonamente"/>
+</menu>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "193000814816",
+    "project_id": "generalgym-9f562",
+    "storage_bucket": "generalgym-9f562.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:193000814816:android:c6708e884e3f84e25af885",
+        "android_client_info": {
+          "package_name": "com.example.gympass"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "193000814816-5icq392vl026u9j70t177gj075omeida.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnBMt41IjWbmThwgGuHf_-q2lNwx4hdkc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "193000814816-5icq392vl026u9j70t177gj075omeida.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

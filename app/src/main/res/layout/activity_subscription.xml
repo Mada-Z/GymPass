@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="20dp">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Subscription">
+
+    <TextView
+        android:id="@+id/tv_subscription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/id"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_subscriptionId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="@string/id"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_subscriptionType"
+        app:layout_constraintStart_toEndOf="@+id/tv_subscription"
+        app:layout_constraintStart_toStartOf="@+id/et_subscriptionType"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/tv_subscriptonType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/abonament"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_subscription" />
+
+    <EditText
+        android:id="@+id/et_subscriptionType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/tip_de_abonament"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_subscriptonType"
+        app:layout_constraintTop_toBottomOf="@+id/et_subscriptionId"
+        app:layout_constraintVertical_bias="0.5"/>
+
+    <TextView
+        android:id="@+id/tv_subscriptonDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/descriere"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_subscriptonType" />
+
+    <EditText
+        android:id="@+id/et_subscriptionDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/descriere_abonament"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_subscriptonDescription"
+        app:layout_constraintTop_toBottomOf="@+id/et_subscriptionType" />
+
+    <TextView
+        android:id="@+id/tv_subscriptonPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/pret"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_subscriptonDescription" />
+
+    <EditText
+        android:id="@+id/et_subscriptionPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="@string/pret"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_subscriptonPrice"
+        app:layout_constraintTop_toBottomOf="@+id/et_subscriptionDescription" />
+    <TextView
+        android:id="@+id/tv_available"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/durata"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_subscriptonPrice" />
+
+    <EditText
+        android:id="@+id/et_available"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="@string/durata"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_available"
+        app:layout_constraintTop_toBottomOf="@+id/et_subscriptionPrice" />
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/sterge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_available" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

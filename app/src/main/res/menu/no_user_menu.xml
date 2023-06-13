@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/login"
+        android:title="@string/autentificare"/>
+    <item android:id="@+id/gymMap"
+            android:title="@string/harta_sali"/>
+
+</menu>

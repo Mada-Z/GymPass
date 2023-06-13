@@ -1,0 +1,10 @@
+{
+  "user_types": [
+    {
+      "type": "admin"
+    },
+    {
+      "type": "sala"
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="20dp">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ClientGymPage">
+
+    <ImageView
+        android:id="@+id/iv_gym"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/nume"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/iv_gym"
+        app:layout_constraintTop_toBottomOf="@id/iv_gym" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="9"
+        android:hint="@string/nume"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_gymOpen"
+        app:layout_constraintStart_toEndOf="@+id/tv_name"
+        app:layout_constraintStart_toStartOf="@+id/et_gymOpen"
+        app:layout_constraintTop_toBottomOf="@id/iv_gym"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/tv_gymOpen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/ora_deschidere"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+    <EditText
+        android:id="@+id/et_gymOpen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/ora_deschidere"
+        app:layout_constraintStart_toEndOf="@id/tv_gymOpen"
+        app:layout_constraintTop_toBottomOf="@id/et_name" />
+
+    <TextView
+        android:id="@+id/tv_gymClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/ora_inchidere"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_gymOpen" />
+
+    <EditText
+        android:id="@+id/et_gymClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/ora_inchidere"
+        app:layout_constraintStart_toEndOf="@+id/tv_gymClose"
+        app:layout_constraintStart_toStartOf="@+id/et_gymOpen"
+        app:layout_constraintTop_toBottomOf="@+id/et_gymOpen" />
+
+    <TextView
+        android:id="@+id/tv_gymStreet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/strada"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_gymClose" />
+
+    <EditText
+        android:id="@+id/et_gymStreet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="9"
+        android:hint="@string/strada"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_gymStreet"
+        app:layout_constraintStart_toStartOf="@+id/et_gymClose"
+        app:layout_constraintTop_toBottomOf="@+id/et_gymClose" />
+
+    <TextView
+        android:id="@+id/tv_gymNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/numar"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_gymStreet" />
+
+    <EditText
+        android:id="@+id/et_gymNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="9"
+        android:hint="@string/numar"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_gymNumber"
+        app:layout_constraintStart_toStartOf="@+id/et_gymStreet"
+        app:layout_constraintTop_toBottomOf="@+id/et_gymStreet" />
+
+    <TextView
+        android:id="@+id/tv_gymCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/oras"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_gymNumber" />
+
+    <EditText
+        android:id="@+id/et_gymCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="9"
+        android:hint="@string/oras"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_gymCity"
+        app:layout_constraintStart_toStartOf="@+id/et_gymNumber"
+        app:layout_constraintTop_toBottomOf="@+id/et_gymNumber" />
+
+    <TextView
+        android:id="@+id/tv_gymCounty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/judet"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_gymCity" />
+
+    <EditText
+        android:id="@+id/et_gymCounty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="9"
+        android:hint="@string/judet"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_gymCounty"
+        app:layout_constraintStart_toStartOf="@+id/et_gymCity"
+        app:layout_constraintTop_toBottomOf="@+id/et_gymCity" />
+
+    <Button
+        android:id="@+id/bt_classes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="76dp"
+        android:text="@string/clase"
+        app:layout_constraintEnd_toStartOf="@+id/bt_trainers"
+        app:layout_constraintTop_toBottomOf="@id/et_gymCounty"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/bt_trainers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/antrenori"
+        app:layout_constraintStart_toEndOf="@+id/bt_classes"
+        app:layout_constraintTop_toBottomOf="@id/et_gymCounty"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

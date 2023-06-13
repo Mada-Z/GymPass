@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="20dp">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Trainer">
+
+    <ImageView
+        android:id="@+id/iv_trainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="36dp"
+        android:adjustViewBounds="true"
+        android:maxWidth="300dp"
+        android:maxHeight="300dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_trainerId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/id"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_trainer" />
+
+    <EditText
+        android:id="@+id/et_trainerId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="@string/id"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_trainerFirstName"
+        app:layout_constraintStart_toEndOf="@+id/tv_trainerId"
+        app:layout_constraintStart_toStartOf="@+id/et_trainerFirstName"
+        app:layout_constraintTop_toBottomOf="@id/iv_trainer"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/tv_trainerFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/prenume"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_trainerId" />
+
+    <EditText
+        android:id="@+id/et_trainerFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/prenume"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_trainerFirstName"
+        app:layout_constraintTop_toBottomOf="@+id/et_trainerId" />
+
+    <TextView
+        android:id="@+id/tv_trainerLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/nume"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_trainerFirstName" />
+
+    <EditText
+        android:id="@+id/et_trainerLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/nume"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_trainerLastName"
+        app:layout_constraintStart_toStartOf="@+id/et_trainerFirstName"
+        app:layout_constraintTop_toBottomOf="@+id/et_trainerFirstName" />
+
+    <TextView
+        android:id="@+id/tv_trainerBirthDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/data_nasterii"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_trainerLastName" />
+
+    <EditText
+        android:id="@+id/et_trainerBirthDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/data_nasterii"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_trainerBirthDate"
+        app:layout_constraintStart_toStartOf="@+id/et_trainerLastName"
+        app:layout_constraintTop_toBottomOf="@+id/et_trainerLastName" />
+
+    <TextView
+        android:id="@+id/tv_trainerTelephone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/telefon"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_trainerBirthDate" />
+
+    <EditText
+        android:id="@+id/et_trainerTelephone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/telefon"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_trainerTelephone"
+        app:layout_constraintStart_toStartOf="@+id/et_trainerBirthDate"
+        app:layout_constraintTop_toBottomOf="@+id/et_trainerBirthDate" />
+
+    <TextView
+        android:id="@+id/tv_trainerEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/email"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_trainerTelephone" />
+
+    <EditText
+        android:id="@+id/et_trainerEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/email"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_trainerEmail"
+        app:layout_constraintStart_toStartOf="@+id/et_trainerTelephone"
+        app:layout_constraintTop_toBottomOf="@+id/et_trainerTelephone" />
+
+    <TextView
+        android:id="@+id/tv_trainerPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/parola"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_trainerEmail" />
+
+    <EditText
+        android:id="@+id/et_trainerPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/parola"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_trainerPassword"
+        app:layout_constraintStart_toStartOf="@+id/et_trainerEmail"
+        app:layout_constraintTop_toBottomOf="@+id/et_trainerEmail" />
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/sterge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_trainerPassword" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

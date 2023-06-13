@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="20dp">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".SignUp">
+
+    <TextView
+        android:id="@+id/tv_clientFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/prenume"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_clientFirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="105dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="@string/prenume"
+            android:minHeight="48dp"
+            app:layout_constraintStart_toEndOf="@+id/tv_clientFirstName"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <TextView
+        android:id="@+id/tv_mandatory1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="10sp"
+        android:textColor="#fc0303"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/et_clientFirstName"
+        app:layout_constraintTop_toBottomOf="@+id/et_clientFirstName" />
+
+    <TextView
+        android:id="@+id/tv_clientLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/nume"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_clientFirstName" />
+
+    <EditText
+        android:id="@+id/et_clientLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="@string/nume"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_clientLastName"
+        app:layout_constraintStart_toStartOf="@+id/et_clientFirstName"
+        app:layout_constraintTop_toBottomOf="@+id/et_clientFirstName" />
+
+    <TextView
+        android:id="@+id/tv_mandatory2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="10sp"
+        android:textColor="#fc0303"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/et_clientLastName"
+        app:layout_constraintTop_toBottomOf="@+id/et_clientLastName" />
+
+    <TextView
+        android:id="@+id/tv_clientBirthDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="@string/data_nasterii"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_clientLastName" />
+
+    <EditText
+        android:id="@+id/et_clientBirthDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="@string/data_nasterii"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_clientBirthDate"
+        app:layout_constraintStart_toStartOf="@+id/et_clientLastName"
+        app:layout_constraintTop_toBottomOf="@+id/et_clientLastName" />
+
+    <TextView
+        android:id="@+id/tv_mandatory3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="10sp"
+        android:textColor="#fc0303"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/et_clientBirthDate"
+        app:layout_constraintTop_toBottomOf="@+id/et_clientBirthDate" />
+
+    <TextView
+        android:id="@+id/tv_clientTelephone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/telefon"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_clientBirthDate" />
+
+    <EditText
+        android:id="@+id/et_clientTelephone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="@string/telefon"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_clientTelephone"
+        app:layout_constraintStart_toStartOf="@+id/et_clientBirthDate"
+        app:layout_constraintTop_toBottomOf="@+id/et_clientBirthDate" />
+
+    <TextView
+        android:id="@+id/tv_mandatory4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="10sp"
+        android:textColor="#fc0303"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/et_clientTelephone"
+        app:layout_constraintTop_toBottomOf="@+id/et_clientTelephone" />
+
+    <TextView
+        android:id="@+id/tv_clientEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="@string/email"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_clientTelephone" />
+
+    <EditText
+        android:id="@+id/et_clientEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="@string/email"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_clientEmail"
+        app:layout_constraintStart_toStartOf="@+id/et_clientTelephone"
+        app:layout_constraintTop_toBottomOf="@+id/et_clientTelephone" />
+
+    <TextView
+        android:id="@+id/tv_mandatory5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="10sp"
+        android:textColor="#fc0303"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/et_clientEmail"
+        app:layout_constraintTop_toBottomOf="@+id/et_clientEmail" />
+
+    <TextView
+        android:id="@+id/tv_clientPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="@string/parola"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_clientEmail" />
+
+    <EditText
+        android:id="@+id/et_clientPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="@string/parola"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_clientPassword"
+        app:layout_constraintStart_toStartOf="@+id/et_clientEmail"
+        app:layout_constraintTop_toBottomOf="@+id/et_clientEmail" />
+
+    <TextView
+        android:id="@+id/tv_mandatory6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="10sp"
+        android:textColor="#fc0303"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/et_clientPassword"
+        app:layout_constraintTop_toBottomOf="@+id/et_clientPassword" />
+
+    <TextView
+        android:id="@+id/tv_confirmPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="@string/confirmare_parola"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_clientPassword" />
+
+    <EditText
+        android:id="@+id/et_confirmPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="@string/parola"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_confirmPassword"
+        app:layout_constraintStart_toStartOf="@+id/et_clientPassword"
+        app:layout_constraintTop_toBottomOf="@+id/et_clientPassword" />
+
+    <TextView
+        android:id="@+id/tv_mandatory7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="10sp"
+        android:textColor="#fc0303"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/et_confirmPassword"
+        app:layout_constraintTop_toBottomOf="@+id/et_confirmPassword" />
+
+    <Button
+        android:id="@+id/bt_createAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:text="@string/creeaza_cont"
+        android:enabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_confirmPassword" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

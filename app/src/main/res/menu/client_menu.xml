@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/profile"
+        android:title="@string/profil"/>
+    <item android:id="@+id/gymMap"
+        android:title="@string/harta_sali"/>
+    <item android:id="@+id/getSubscription"
+        android:title="@string/cumpara_abonament"/>
+    <item android:id="@+id/subscritions"
+        android:title="@string/abonamentul_tau"/>
+    <item android:id="@+id/reservation"
+        android:title="@string/rezervari"/>
+</menu>
