@@ -5,6 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -65,33 +66,33 @@ public class ClientSubscriptionList extends AppCompatActivity {
     private void getSubscriptions(){
         final ArrayAdapter<SubscriptionModel> adapter = new ArrayAdapter<SubscriptionModel>(this, android.R.layout.simple_dropdown_item_1line, subscriptionAL);
         databaseReference = (DatabaseReference) FirebaseDatabase.getInstance().getReference().child("SUBSCRIPTION");
-            databaseReference.addChildEventListener(new ChildEventListener() {
-                @Override
-                public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                            subscriptionAL.add(snapshot.getValue(SubscriptionModel.class));
-                            adapter.notifyDataSetChanged();
-                }
-
-                @Override
-                public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+        databaseReference.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+                        subscriptionAL.add(snapshot.getValue(SubscriptionModel.class));
                         adapter.notifyDataSetChanged();
-                }
+            }
 
-                @Override
-                public void onChildRemoved(@NonNull DataSnapshot snapshot) {
-                        subscriptionAL.remove(snapshot.getValue(ClassesModel.class));
-                        adapter.notifyDataSetChanged();
-                }
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+                    adapter.notifyDataSetChanged();
+            }
 
-                @Override
-                public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                }
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot snapshot) {
+                    subscriptionAL.remove(snapshot.getValue(ClassesModel.class));
+                    adapter.notifyDataSetChanged();
+            }
 
-                @Override
-                public void onCancelled(@NonNull DatabaseError error) {
-                }
-            });
-            lv_subscriptions.setAdapter(adapter);
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+            }
+        });
+        lv_subscriptions.setAdapter(adapter);
     }
 
     @Override

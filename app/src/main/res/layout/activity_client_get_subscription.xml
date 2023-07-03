@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:paddingBottom="20dp">
-<androidx.constraintlayout.widget.ConstraintLayout
+    android:paddingBottom="20dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".ClientGetSubscription">
@@ -112,8 +109,6 @@
         android:text="@string/cumpara_abonament"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_available"
-        android:enabled="false"/>
+        app:layout_constraintTop_toBottomOf="@+id/tv_available" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>

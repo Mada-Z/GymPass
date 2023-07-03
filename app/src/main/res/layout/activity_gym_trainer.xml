@@ -125,15 +125,14 @@
         app:layout_constraintBottom_toTopOf="@+id/lv_trainers"/>
     <ListView
         android:id="@+id/lv_trainers"
-        style="@android:style/Widget.DeviceDefault.ExpandableListView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
         android:layout_marginTop="5dp"
         android:isScrollContainer="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt_add_trainer" />
+        app:layout_constraintTop_toBottomOf="@+id/bt_add_trainer"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

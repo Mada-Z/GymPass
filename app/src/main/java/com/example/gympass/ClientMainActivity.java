@@ -44,6 +44,7 @@ public class ClientMainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
         switch (item.getItemId()) {
             case (R.id.profile): {
                 Intent i = new Intent(ClientMainActivity.this, ClientProfile.class);
@@ -63,8 +64,14 @@ public class ClientMainActivity extends AppCompatActivity {
                 startActivity(i);
                 return true;
             }
-            case (R.id.subscritions): {
+            case (R.id.subscriptions): {
                 Intent i = new Intent(ClientMainActivity.this, ActiveSubscription.class);
+                i.putExtra("userId", userId);
+                startActivity(i);
+                return true;
+            }
+            case (R.id.reservation): {
+                Intent i = new Intent(ClientMainActivity.this, ClientReservedClasses.class);
                 i.putExtra("userId", userId);
                 startActivity(i);
                 return true;

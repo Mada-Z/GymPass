@@ -6,7 +6,7 @@
         android:title="@string/harta_sali"/>
     <item android:id="@+id/getSubscription"
         android:title="@string/cumpara_abonament"/>
-    <item android:id="@+id/subscritions"
+    <item android:id="@+id/subscriptions"
         android:title="@string/abonamentul_tau"/>
     <item android:id="@+id/reservation"
         android:title="@string/rezervari"/>

@@ -87,8 +87,8 @@
     <ListView
         android:id="@+id/lv_classes"
         style="@android:style/Widget.DeviceDefault.ExpandableListView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:isScrollContainer="false"
         app:layout_constraintBottom_toBottomOf="parent"

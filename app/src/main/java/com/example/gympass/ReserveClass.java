@@ -62,6 +62,10 @@ public class ReserveClass extends AppCompatActivity {
             ReservationModel reservationModel = new ReservationModel();
             reservationModel.setClassId(Integer.parseInt(classId));
             reservationModel.setUserId(Integer.parseInt(userId));
+            reservationModel.setDate(classDate);
+            reservationModel.setHour(classHour);
+            reservationModel.setTrainerName(trainerName);
+            reservationModel.setClassName(className);
 
             databaseReference.push().setValue(reservationModel);
             Toast.makeText(ReserveClass.this, "Rezervarea s-a facut cu succes!", Toast.LENGTH_SHORT).show();

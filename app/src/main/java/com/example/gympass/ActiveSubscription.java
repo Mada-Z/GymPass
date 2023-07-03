@@ -47,7 +47,6 @@ public class ActiveSubscription extends ClientMainActivity {
     String data_final;
     String prenume, nume, email, data_nasterii;
     int userId;
-    ArrayAdapter<UserSubscriptionModel> adapter;
 
 
     @Override
@@ -63,19 +62,16 @@ public class ActiveSubscription extends ClientMainActivity {
         lv_subscriptions = findViewById(R.id.lv_subscriptions);
         clientSubscription = new ArrayList<>();
         clientsAL =  new ArrayList<>();
-        adapter = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, clientSubscription);
 
         Intent i = getIntent();
         userId = Integer.parseInt(i.getStringExtra("userId"));
-        Toast.makeText(this, userId + "", Toast.LENGTH_SHORT).show();
 
-        getSubscriptions();
+        getActiveSubscriptions();
         getClients();
 
         lv_subscriptions.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(ActiveSubscription.this, clientsAL.size()+"", Toast.LENGTH_SHORT).show();
                 UserSubscriptionModel clickedSubscription = (UserSubscriptionModel) parent.getItemAtPosition(position);
                 tv_subscription.setText("Abonament activ");
                 MultiFormatWriter writer = new MultiFormatWriter();
@@ -116,7 +112,8 @@ public class ActiveSubscription extends ClientMainActivity {
         });
     }
 
-    private void getSubscriptions() {
+    private void getActiveSubscriptions() {
+        final ArrayAdapter<UserSubscriptionModel> adapter = new ArrayAdapter<UserSubscriptionModel>(this, android.R.layout.simple_dropdown_item_1line, clientSubscription);
         databaseReference = (DatabaseReference) FirebaseDatabase.getInstance().getReference().child("USER_SUBSCRIPTION");
         databaseReference.addChildEventListener(new ChildEventListener() {
             @Override
@@ -144,10 +141,8 @@ public class ActiveSubscription extends ClientMainActivity {
             @Override
             public void onChildRemoved(@NonNull DataSnapshot snapshot) {
                 if(snapshot.getValue(UserSubscriptionModel.class).getUserId() == userId) {
-                    clientSubscription.remove(snapshot.getValue(UserSubscriptionModel.class));
                     adapter.notifyDataSetChanged();
                 }
-
             }
 
             @Override
@@ -161,7 +156,6 @@ public class ActiveSubscription extends ClientMainActivity {
             }
         });
         lv_subscriptions.setAdapter(adapter);
-
     }
 
     private void getClients() {
